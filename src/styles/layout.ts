@@ -39,7 +39,7 @@ import {
   ZIndexProps,
 } from 'styled-system';
 import { Breakpoint } from '../types/styles';
-import th from './theme';
+import th, { spacing } from './theme';
 import { scrollStyles } from './utils';
 
 interface FlexDivProps {
@@ -58,7 +58,7 @@ interface FlexDivProps {
 
 // Flex is the basis for other layout components
 
-const Flex = styled('div')<
+export const Flex = styled('div')<
   AlignItemsProps &
     AlignSelfProps &
     BackgroundProps &
@@ -74,10 +74,10 @@ const Flex = styled('div')<
     WidthProps &
     ZIndexProps
 >(
-  alignItems,
   {
     alignItems: 'center',
   },
+  alignItems,
   alignSelf,
   background,
   borderColor,
@@ -126,7 +126,7 @@ const Flex = styled('div')<
 
 // Boilerplate layout components
 
-const Break = styled('br')(
+export const Break = styled('br')(
   {
     display: 'none',
     flexBasis: '100%',
@@ -148,22 +148,22 @@ const Break = styled('br')(
   width,
 );
 
-const Caption = styled('div')({
+export const Caption = styled('div')({
   color: th.colors.black,
   fontSize: '1rem',
 });
 
-const FlexCentered = styled(Flex)({
+export const FlexCentered = styled(Flex)({
   justifyContent: 'center',
 });
 
-const FlexColumn = styled(Flex)({
+export const FlexColumn = styled(Flex)({
   flexDirection: 'column',
 });
 
-const Img = styled('img')(height, space, width);
+export const Img = styled('img')(height, space, width);
 
-const Space = styled('div')(
+export const Space = styled('div')(
   alignItems,
   alignSelf,
   background,
@@ -185,28 +185,28 @@ const Space = styled('div')(
   zIndex,
 );
 
-const GalleryWrapper = styled(Space)({
+export const GalleryWrapper = styled(Space)({
   display: 'block',
   minHeight: '1px',
   overflow: 'auto',
   width: '100%',
 });
 
-const Scroll = styled(Space)(
+export const Scroll = styled(Space)(
   ({ showScrollBar = true }: { showScrollBar: boolean }) => ({
     ...scrollStyles(showScrollBar),
   }),
   overflow,
 );
 
-const ScrollFlex = styled(Flex)(
+export const ScrollFlex = styled(Flex)(
   ({ showScrollBar = true }: { showScrollBar: boolean }) => ({
     ...scrollStyles(showScrollBar),
   }),
   overflow,
 );
 
-const Section = styled('div')(
+export const Section = styled('div')(
   {
     display: 'flex',
     flexDirection: 'column',
@@ -216,22 +216,20 @@ const Section = styled('div')(
   space,
 );
 
-const Page = styled(Space)({
+export const Page = styled(Space)({
   background: th.colors.background,
+  border: th.borders.green,
   margin: '0 auto',
-  maxWidth: th.widths.maxContent,
+  padding: `${spacing.xl} ${spacing.l}`,
   position: 'relative',
-  width: '90%',
+  width: '95%',
   [th.breakpoints.mobile]: {
+    padding: `${spacing.ml} ${spacing.m}`,
     width: '100%',
   },
 });
 
-const Red = styled('span')({
-  color: th.colors.red,
-});
-
-const BorderLine = styled('div')(
+export const BorderLine = styled('div')(
   {
     background: th.gradients.black,
     height: th.spacing.s,
@@ -244,7 +242,7 @@ const BorderLine = styled('div')(
   width,
 );
 
-const Line = styled('div')(
+export const Line = styled('div')(
   {
     borderBottom: th.borders.black,
     color: th.colors.black,
@@ -257,6 +255,10 @@ const Line = styled('div')(
   space,
   width,
 );
+
+export const SecondaryColor = styled('span')({
+  color: th.colors.green,
+});
 
 // Project specific layout components
 
@@ -273,9 +275,9 @@ export default {
   Img,
   Line,
   Page,
-  Red,
   Scroll,
   ScrollFlex,
+  SecondaryColor,
   Section,
   Space,
 };

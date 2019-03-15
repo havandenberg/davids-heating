@@ -5,6 +5,7 @@ import { width } from 'styled-system';
 import l from '../../styles/layout';
 import th from '../../styles/theme';
 import t from '../../styles/typography';
+import { StyleValue } from '../../types/styles';
 import { isMobile, isMobileOnly } from '../../utils/screensize';
 import FileInput from './FileInput';
 import { FormFieldValidations, OnChangeHandler } from './index';
@@ -12,28 +13,22 @@ import { InputType, SelectInput, TextArea, TextInput } from './Input';
 
 export const InputLabel = styled(t.Text)(
   {
-    fontSize: th.fontSizes.largeText,
     fontWeight: 'bold',
-    marginRight: th.spacing.l,
-    marginTop: th.spacing.s,
+    marginBottom: th.spacing.s,
     textAlign: isMobileOnly() ? 'left' : 'right',
-    [th.breakpoints.tablet]: {
-      fontSize: th.fontSizes.text,
-    },
     [th.breakpoints.mobile]: {
-      fontSize: th.fontSizes.text,
       marginBottom: th.spacing.sm,
     },
   },
   ({ error }: { error?: boolean }) => ({
-    color: error ? th.colors.red : th.colors.black,
+    color: error ? th.colors.blue : th.colors.black,
   }),
   width,
 );
 
 export interface FormItemProps<FormFields, K extends keyof FormFields> {
   autoComplete?: string;
-  flex: string | number | Array<string | number>;
+  flex: StyleValue;
   helpText?: string | string[];
   helpTextValidations?: Array<(value: string, fields: FormFields) => boolean>;
   inputStyles?: React.CSSProperties;
@@ -50,13 +45,13 @@ export interface FormRowData<FormFields> {
   isRequired?: boolean;
   items: Array<FormItemProps<FormFields, keyof FormFields>>;
   label?: string;
-  rowWidth?: string | number | Array<string | number>;
+  rowWidth?: StyleValue;
 }
 
 interface FormRowProps<FormFields> extends FormRowData<FormFields> {
   customStyles: {
-    labelWidth?: string | number | Array<string | number>;
-    rowWidth?: string | number | Array<string | number>;
+    labelWidth?: StyleValue;
+    rowWidth?: StyleValue;
   };
   errors: string[];
   fields: FormFields;
@@ -169,14 +164,11 @@ class FormRow<FormFields> extends React.Component<FormRowProps<FormFields>> {
       onChange,
     } = this.props;
     return (
-      <l.Flex
-        alignTop
-        columnOnMobile
-        mt={R.isEmpty(items) ? th.spacing.ml : undefined}>
+      <l.FlexColumn alignTop mt={R.isEmpty(items) ? th.spacing.ml : undefined}>
         {label !== undefined && (
-          <InputLabel nowrap={!isMobile()} width={customStyles.labelWidth}>
+          <InputLabel nowrap={!isMobile()}>
             {label}
-            {isRequired && <l.Red>*</l.Red>}
+            {isRequired && <l.SecondaryColor>*</l.SecondaryColor>}
             {label && !R.isEmpty(items) && ':'}
           </InputLabel>
         )}
@@ -228,7 +220,9 @@ class FormRow<FormFields> extends React.Component<FormRowProps<FormFields>> {
                     ) : editing ? (
                       <t.HelpText valid={isValid}>
                         {item.helpText}
-                        {item.isRequired && <l.Red>*</l.Red>}
+                        {item.isRequired && (
+                          <l.SecondaryColor>*</l.SecondaryColor>
+                        )}
                       </t.HelpText>
                     ) : (
                       <>
@@ -245,7 +239,7 @@ class FormRow<FormFields> extends React.Component<FormRowProps<FormFields>> {
             },
           )}
         </l.Flex>
-      </l.Flex>
+      </l.FlexColumn>
     );
   }
 }

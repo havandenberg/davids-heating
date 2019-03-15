@@ -6,40 +6,42 @@ import {
   TABLET_DOWN,
   TABLET_UP,
 } from '../utils/screensize';
-import { isMobile } from '../utils/screensize';
 
 // Boilerplate theme constants
 
-const colors = {
-  background: '#F2F3F4',
+export const colors = {
+  background: '#e9f4ff',
   black: '#242424',
-  darkBlue: '#406BAC',
-  gold: '#D4AF37',
+  blue: '#003A57',
   gray: '#4A4A4A',
-  green: '#4BB543',
+  green: '#22C770',
+  lightBlue: '#009FCD',
   lightGray: '#DEDEDE',
-  lightRed: '#F46767',
+  lightGreen: '#47E5A9',
   medGray: '#818181',
   red: '#F14042',
   white: '#FFFFFF',
 };
 
-const gradients = {
+export const gradients = {
   black: `linear-gradient(to bottom, ${colors.gray}, ${colors.black})`,
-  red: `linear-gradient(to bottom, ${colors.lightRed}, ${colors.red})`,
+  blue: `linear-gradient(to bottom, ${colors.lightBlue}, ${colors.blue})`,
+  green: `linear-gradient(to bottom, ${colors.lightGreen}, ${colors.green})`,
 };
 
-const borders = {
+export const borders = {
   black: `solid 1px ${colors.black}`,
   blackThick: `solid 2px ${colors.black}`,
+  blue: `solid 1px ${colors.blue}`,
+  blueThick: `solid 2px ${colors.blue}`,
+  green: `solid 3px ${colors.green}`,
   radius: 6,
-  red: `solid 1px ${colors.red}`,
   redThick: `solid 2px ${colors.red}`,
   transparent: `solid 1px transparent`,
   white: `solid 1px ${colors.white}`,
 };
 
-const breakpoints = {
+export const breakpoints = {
   [DESKTOP]: '@media (min-width: 1000px)',
   [MOBILE]: '@media (max-width: 699px)',
   [SMALL]: '@media (max-width: 320px)',
@@ -48,27 +50,30 @@ const breakpoints = {
   [TABLET_UP]: '@media (min-width: 700px)',
 };
 
-const fonts = {
-  fontFamily: 'Font-Family, sans-serif',
+export const fonts = {
+  notoBold: 'Noto-Bold, sans-serif',
+  notoBoldItalic: 'Noto-BoldItalic, sans-serif',
+  notoItalic: 'Noto-Italic, sans-serif',
+  notoRegular: 'Noto-Regular, sans-serif',
 };
 
-const fontSizes = {
+export const fontSizes = {
   h1: ['28px', '28px', '28px'],
-  h2: ['20px', '24px', '24px'],
+  h2: ['20px', '22px', '24px'],
   h3: ['20px', '24px', '24px'],
-  helpText: ['10px', '12px', '12px'],
-  largeText: ['16px', '20px', '20px'],
-  subtitle: ['20px', '28px', '28px'],
+  helpText: ['12px', '12px', '12px'],
+  largeText: ['20px', '20px', '20px'],
+  subtitle: ['28px', '28px', '28px'],
   text: ['16px', '16px', '16px'],
-  title: ['32px', '42px', '52px'],
+  title: ['42px', '42px', '52px'],
 };
 
-const shadows = {
+export const shadows = {
   box: '0 10px 6px -6px #777',
   text: '1px 2px 3px rgba(0,0,0,0.3)',
 };
 
-const spacing = {
+export const spacing = {
   huge: '128px',
   l: '32px',
   m: '16px',
@@ -79,11 +84,11 @@ const spacing = {
   xl: '64px',
 };
 
-const transitions = {
+export const transitions = {
   default: 'all 0.3s ease',
 };
 
-const z = {
+export const z = {
   high: 5,
   low: 1,
   max: 100,
@@ -94,20 +99,20 @@ const z = {
 
 // Single variables
 
-const heights = {
+export const heights = {
   header: '650px',
-  input: '45px',
+  input: '40px',
   navHeight: '32px',
 };
 
-const widths = {
+export const widths = {
   input: '350px',
   maxContent: '1024px',
-  maxPage: '1400px',
+  maxPage: '1440px',
 };
 
-const scrollOffset = isMobile() ? -100 : -60;
-const scrollOptions = {
+export const scrollOffset = -30;
+export const scrollOptions = {
   duration: 500,
   offset: scrollOffset,
   smooth: true,

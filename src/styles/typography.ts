@@ -13,12 +13,13 @@ import {
   textAlign,
   width,
 } from 'styled-system';
-import th from './theme';
+import { StyleValue } from '../types/styles';
+import th, { transitions } from './theme';
 import { scrollStyles } from './utils';
 
 // Basic typography components
 
-const textOptions = [
+export const textOptions = [
   alignSelf,
   ({ bold }: { bold?: boolean }) => ({
     fontWeight: bold ? 'bold' : undefined,
@@ -50,12 +51,15 @@ const textOptions = [
   }),
   space,
   width,
+  {
+    transition: transitions.default,
+  },
 ];
 
 export const Title = styled('div')(
   {
     color: th.colors.black,
-    fontFamily: th.fonts.fontFamily,
+    fontFamily: th.fonts.notoBold,
     fontSize: th.fontSizes.title[2],
     textShadow: th.shadows.text,
     [th.breakpoints.tablet]: {
@@ -71,7 +75,7 @@ export const Title = styled('div')(
 export const Subtitle = styled('div')(
   {
     color: th.colors.black,
-    fontFamily: th.fonts.fontFamily,
+    fontFamily: th.fonts.notoBold,
     fontSize: th.fontSizes.subtitle[2],
     [th.breakpoints.tablet]: {
       fontSize: th.fontSizes.subtitle[1],
@@ -85,17 +89,13 @@ export const Subtitle = styled('div')(
 
 export const H1 = styled('h1')(
   {
-    color: th.colors.black,
-    fontFamily: th.fonts.fontFamily,
+    color: th.colors.blue,
+    fontFamily: th.fonts.notoBold,
     margin: 0,
     padding: 0,
     textShadow: th.shadows.text,
   },
-  ({
-    fontSize,
-  }: {
-    fontSize: { [key: string]: string | number | Array<string | number> };
-  }) =>
+  ({ fontSize }: { fontSize: { [key: string]: StyleValue } }) =>
     !fontSize && {
       fontSize: th.fontSizes.h1[2],
       [th.breakpoints.tablet]: {
@@ -110,16 +110,12 @@ export const H1 = styled('h1')(
 
 export const H2 = styled('h2')(
   {
-    color: th.colors.black,
-    fontFamily: th.fonts.fontFamily,
+    color: th.colors.blue,
+    fontFamily: th.fonts.notoRegular,
     margin: 0,
     padding: 0,
   },
-  ({
-    fontSize,
-  }: {
-    fontSize: { [key: string]: string | number | Array<string | number> };
-  }) =>
+  ({ fontSize }: { fontSize: { [key: string]: StyleValue } }) =>
     !fontSize && {
       fontSize: th.fontSizes.h2[2],
       [th.breakpoints.tablet]: {
@@ -134,16 +130,12 @@ export const H2 = styled('h2')(
 
 export const H3 = styled('h3')(
   {
-    color: th.colors.black,
-    fontFamily: th.fonts.fontFamily,
+    color: th.colors.blue,
+    fontFamily: th.fonts.notoRegular,
     margin: 0,
     padding: 0,
   },
-  ({
-    fontSize,
-  }: {
-    fontSize: { [key: string]: string | number | Array<string | number> };
-  }) =>
+  ({ fontSize }: { fontSize: { [key: string]: StyleValue } }) =>
     !fontSize && {
       fontSize: th.fontSizes.h3[2],
       [th.breakpoints.tablet]: {
@@ -158,8 +150,8 @@ export const H3 = styled('h3')(
 
 export const Text = styled('div')(
   {
-    color: th.colors.black,
-    fontFamily: th.fonts.fontFamily,
+    color: th.colors.blue,
+    fontFamily: th.fonts.notoRegular,
     letterSpacing: 1,
     lineHeight: 1.4,
   },
@@ -168,7 +160,7 @@ export const Text = styled('div')(
     fontSize,
   }: {
     large?: boolean;
-    fontSize: { [key: string]: string | number | Array<string | number> };
+    fontSize: { [key: string]: StyleValue };
   }) =>
     !fontSize && {
       fontSize: large ? th.fontSizes.largeText[2] : th.fontSizes.text[2],
@@ -182,18 +174,17 @@ export const Text = styled('div')(
   ...textOptions,
 );
 
-const Anchor = styled('a')(
+export const Anchor = styled('a')(
   {
     alignItems: 'center',
-    borderBottom: th.borders.transparent,
     cursor: 'pointer',
     display: 'inline-flex',
-    fontFamily: th.fonts.fontFamily,
+    fontFamily: th.fonts.notoRegular,
     transition: th.transitions.default,
   },
-  ({ border, color }: { border: string; color: string }) => ({
+  ({ color, hoverColor }: { color: string; hoverColor: string }) => ({
     ':hover': {
-      borderBottom: border,
+      color: hoverColor,
     },
     ':link': {
       color,
@@ -201,14 +192,13 @@ const Anchor = styled('a')(
     ':visited': {
       color,
     },
-    borderBottom: th.borders.transparent,
   }),
   ({
     large,
     fontSize,
   }: {
     large?: boolean;
-    fontSize: { [key: string]: string | number | Array<string | number> };
+    fontSize: { [key: string]: StyleValue };
   }) =>
     !fontSize && {
       fontSize: large ? th.fontSizes.largeText[2] : th.fontSizes.text[2],
@@ -222,7 +212,7 @@ const Anchor = styled('a')(
   ...textOptions,
 );
 
-const Link = styled(RouterLink)(
+export const Link = styled(RouterLink)(
   ({ border, color }: { border: string; color: string }) => ({
     ':hover': {
       borderBottom: border,
@@ -241,7 +231,7 @@ const Link = styled(RouterLink)(
     fontSize,
   }: {
     large?: boolean;
-    fontSize: { [key: string]: string | number | Array<string | number> };
+    fontSize: { [key: string]: StyleValue };
   }) =>
     !fontSize && {
       fontSize: large ? th.fontSizes.largeText[2] : th.fontSizes.text[2],
@@ -257,10 +247,10 @@ const Link = styled(RouterLink)(
 
 type HoverStyle = 'opacity' | 'underline' | 'none';
 
-const TextButton = styled(Text)(
+export const TextButton = styled(Text)(
   ({
     border,
-    color = th.colors.black,
+    color = th.colors.blue,
     hoverStyle,
     onClick,
   }: {
@@ -285,7 +275,7 @@ const TextButton = styled(Text)(
     fontSize,
   }: {
     large?: boolean;
-    fontSize: { [key: string]: string | number | Array<string | number> };
+    fontSize: { [key: string]: StyleValue };
   }) =>
     !fontSize && {
       fontSize: large ? th.fontSizes.largeText[2] : th.fontSizes.text[2],
@@ -299,12 +289,12 @@ const TextButton = styled(Text)(
   ...textOptions,
 );
 
-const helpColor = ({ valid }: { valid?: boolean }) => ({
+export const helpColor = ({ valid }: { valid?: boolean }) => ({
   color: valid ? th.colors.green : th.colors.gray,
   transition: th.transitions.default,
 });
 
-const HelpText = styled(Text)(
+export const HelpText = styled(Text)(
   {
     fontSize: th.fontSizes.helpText[2],
     [th.breakpoints.tablet]: {
@@ -317,7 +307,7 @@ const HelpText = styled(Text)(
   helpColor,
 );
 
-const HelpSpan = styled('span')(helpColor);
+export const HelpSpan = styled('span')(helpColor);
 
 export default {
   Anchor,

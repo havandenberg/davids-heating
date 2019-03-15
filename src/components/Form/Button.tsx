@@ -51,7 +51,7 @@ export const getButtonProps: (background: string, gradient: string) => any = (
 });
 
 export const ButtonPrimary = styled('button')(
-  ({ background = th.colors.red, gradient = th.gradients.red }) => ({
+  ({ background = th.colors.green, gradient = th.gradients.green }) => ({
     ...getButtonProps(background, gradient),
   }),
   space,
@@ -59,7 +59,7 @@ export const ButtonPrimary = styled('button')(
 );
 
 export const LinkPrimary = styled(Link)(
-  getButtonProps(th.colors.red, th.gradients.red),
+  getButtonProps(th.colors.blue, th.gradients.blue),
   space,
   width,
 );
@@ -78,10 +78,10 @@ export const LinkSecondary = styled(Link)(
 
 export const ButtonTertiary = styled('div')({
   ':hover': {
-    borderBottom: th.borders.red,
+    borderBottom: th.borders.blue,
   },
   borderBottom: th.borders.transparent,
-  color: th.colors.red,
+  color: th.colors.blue,
   cursor: 'pointer',
   fontSize: th.fontSizes.largeText,
   transition: th.transitions.default,

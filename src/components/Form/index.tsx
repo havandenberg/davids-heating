@@ -21,16 +21,16 @@ const NavItem = styled(t.Text)(
     enableDirectStepNav?: boolean;
   }) => ({
     ':hover': {
-      color: enableDirectStepNav ? th.colors.red : undefined,
+      color: enableDirectStepNav ? th.colors.blue : undefined,
     },
-    color: active ? th.colors.red : `${th.colors.red}80`,
+    color: active ? th.colors.blue : `${th.colors.blue}80`,
     cursor: enableDirectStepNav ? 'pointer' : 'default',
     transition: th.transitions.default,
   }),
 );
 
 const NavSeparator = styled('div')({
-  background: th.colors.red,
+  background: th.colors.blue,
   borderRadius: '50%',
   height: th.spacing.s,
   margin: `0 ${th.spacing.xl}`,
@@ -217,7 +217,7 @@ class Form<FormFields> extends React.Component<
 
     const isValid = this.validateAll();
 
-    if (!isValid) {
+    if (isMobileOnly() && !isValid) {
       this.resetScroll();
       return;
     }
@@ -255,7 +255,7 @@ class Form<FormFields> extends React.Component<
     this.setState({ ...initialState, fields: this.props.initialValues });
   };
 
-  resetScroll = () => scrollToId(this.props.id, { offset: -200 });
+  resetScroll = () => scrollToId(this.props.id);
 
   setStep = (currentStep: string) => this.setState({ currentStep });
 
@@ -375,18 +375,15 @@ class Form<FormFields> extends React.Component<
             center
             color={th.colors.red}
             large
-            mb={[th.spacing.ml, th.spacing.xl]}
+            mb={th.spacing.m}
             mx="auto"
             width="75%">
             {errorMessage || onFailMessage}
           </t.Text>
         )}
         <div id={id}>
-          {this.hasErrors() && validationErrorMessage && (
-            <t.Text
-              center
-              color={th.colors.red}
-              mb={[th.spacing.ml, th.spacing.xl]}>
+          {this.hasErrors() && !R.isEmpty(validationErrorMessage) && (
+            <t.Text center color={th.colors.red} mb={th.spacing.m}>
               {validationErrorMessage}
             </t.Text>
           )}

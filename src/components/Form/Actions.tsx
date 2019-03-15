@@ -25,9 +25,9 @@ const FormActions = ({
         data: any,
       ) => void);
 }) => (
-  <l.FlexCentered mt={th.spacing.xl}>
+  <l.FlexCentered mt={th.spacing.ml}>
     {loading ? (
-      <PulseLoader sizeUnit="px" size={30} color={th.colors.red} />
+      <PulseLoader sizeUnit="px" size={30} color={th.colors.blue} />
     ) : (
       <l.FlexCentered>
         {handleBack && (

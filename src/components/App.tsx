@@ -6,8 +6,13 @@ import {
   Route,
   Switch,
 } from 'react-router-dom';
+import l from '../styles/layout';
 import th from '../styles/theme';
-import ty from '../styles/typography';
+import ContactForm from './ContactForm';
+import Footer from './Footer';
+import Header from './Header';
+import Reviews from './Reviews';
+import Services from './Services';
 
 const Main = styled('div')({
   background: th.colors.background,
@@ -28,7 +33,27 @@ class App extends React.Component<{}, State> {
             <Route
               exact
               path="/"
-              component={() => <ty.Title center>Boilerplate</ty.Title>}
+              component={() => (
+                <div>
+                  <Header />
+                  <l.Space background={th.colors.blue}>
+                    <l.Page>
+                      <l.Flex alignTop columnOnMobile>
+                        <l.Space
+                          mb={[th.spacing.l, 0, 0]}
+                          width={['100%', '65%', '75%']}>
+                          <Services />
+                          <Reviews />
+                        </l.Space>
+                        <l.Space width={['100%', '35%', '25%']}>
+                          <ContactForm />
+                        </l.Space>
+                      </l.Flex>
+                    </l.Page>
+                  </l.Space>
+                  <Footer />
+                </div>
+              )}
             />
             <Redirect to="/" />
           </Switch>

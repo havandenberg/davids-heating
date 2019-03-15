@@ -12,7 +12,7 @@ import { isMobile } from '../../utils/screensize';
 const DropzoneInner = styled('div')(
   {
     ':hover': {
-      border: `2px solid ${th.colors.red}`,
+      border: `2px solid ${th.colors.blue}`,
     },
     cursor: 'pointer',
     padding: th.spacing.s,
@@ -20,16 +20,16 @@ const DropzoneInner = styled('div')(
   },
   ({ error, isDragActive }: { error?: boolean; isDragActive: boolean }) => ({
     border: error
-      ? th.borders.redThick
+      ? th.borders.blueThick
       : isDragActive
-      ? `2px solid ${th.colors.red}`
+      ? `2px solid ${th.colors.blue}`
       : `2px dashed ${th.colors.black}`,
   }),
 );
 
 const LoadingBar = styled('div')(
   {
-    background: th.colors.red,
+    background: th.colors.blue,
     height: 2,
   },
   width,

@@ -1,6 +1,6 @@
 import th from './theme';
 
-export const scrollStyles = (showScrollBar: boolean) => ({
+export const scrollStyles = (showScrollBar: boolean = true) => ({
   '::-webkit-scrollbar': {
     height: showScrollBar ? 18 : 0,
     width: showScrollBar ? 18 : 0,
