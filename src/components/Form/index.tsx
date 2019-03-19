@@ -362,11 +362,7 @@ class Form<FormFields> extends React.Component<
           </l.FlexCentered>
         )}
         {completed && !failed && (
-          <t.Text
-            center
-            color={th.colors.green}
-            large
-            mb={[th.spacing.ml, th.spacing.xl]}>
+          <t.Text center color={th.colors.green} large mb={th.spacing.m}>
             {successMessage}
           </t.Text>
         )}

@@ -12,7 +12,7 @@ interface Item {
 
 const navItems = [
   { name: 'Services', id: 'services' },
-  { name: 'Brands', id: 'brands' },
+  { name: 'Projects', id: 'projects' },
   { name: 'Reviews', id: 'reviews' },
   { name: 'Contact', id: 'contact' },
 ];

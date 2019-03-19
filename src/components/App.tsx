@@ -11,6 +11,7 @@ import th from '../styles/theme';
 import ContactForm from './ContactForm';
 import Footer from './Footer';
 import Header from './Header';
+import Projects from './Projects';
 import Reviews from './Reviews';
 import Services from './Services';
 
@@ -43,6 +44,7 @@ class App extends React.Component<{}, State> {
                           mb={[th.spacing.l, 0, 0]}
                           width={['100%', '65%', '75%']}>
                           <Services />
+                          <Projects />
                           <Reviews />
                         </l.Space>
                         <l.Space width={['100%', '35%', '25%']}>

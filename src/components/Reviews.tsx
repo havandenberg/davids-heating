@@ -15,7 +15,7 @@ const Reviews = () => {
     <div id="reviews-end">
       <l.Flex
         flexDirection={['column', 'column', 'row']}
-        mt={[th.spacing.l, th.spacing.xl, th.spacing.l]}
+        mt={th.spacing.xl}
         spaceBetween>
         <ty.H1
           id="reviews"

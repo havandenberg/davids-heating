@@ -71,7 +71,7 @@ const Footer = () => (
       <ty.Subtitle
         textAlign={isMobileOnly() ? 'center' : 'right'}
         color={th.colors.green}>
-        Heat & AC
+        Heating & Air Conditioning
       </ty.Subtitle>
       <l.Space height={th.spacing.l} />
       <ty.Text

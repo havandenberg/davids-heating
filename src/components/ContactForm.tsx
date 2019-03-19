@@ -98,8 +98,8 @@ class Step extends React.Component<FormComponentProps<ContactFields>> {
     if (process.env.REACT_APP_EMAILJS_KEY) {
       emailjs
         .send(
-          'react_fitness_club',
-          'template_rfc',
+          'davids_heat_and_ac',
+          'davids_heat_estimate_request',
           {
             address,
             description,

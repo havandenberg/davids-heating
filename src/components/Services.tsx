@@ -97,9 +97,9 @@ const Services = () => (
         );
       })}
     </l.FlexCentered>
-    <ty.H1 id="brands" mb={spacing.l} mt={spacing.l}>
+    <ty.H2 id="brands" mb={spacing.l} mt={spacing.l}>
       Brands
-    </ty.H1>
+    </ty.H2>
     <l.Flex isWrap>
       {brands.map((brand: string, index: number) => (
         <React.Fragment key={`brand-${index}`}>

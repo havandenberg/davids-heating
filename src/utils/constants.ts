@@ -1,4 +1,4 @@
-export const ASSETS_PATH = 'https://s3.amazonaws.com/bucket-name';
+export const ASSETS_PATH = 'https://s3.amazonaws.com/davids-heat-and-ac';
 
 export const daysCountInMonths = [
   31,
