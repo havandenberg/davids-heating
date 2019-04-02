@@ -28,6 +28,7 @@ const Footer = () => (
       <ty.H1 bold color={th.colors.green} id="contact" mb={th.spacing.ml}>
         Contact Us:
       </ty.H1>
+      <l.Space height="100%" />
       <HoverAction
         actionType="anchor"
         color={th.colors.white}
@@ -55,8 +56,6 @@ const Footer = () => (
       />
       <l.Space height={th.spacing.sm} />
       <ty.Text color={th.colors.white} large={!isSmall()}>
-        4 Gleason Way
-        <l.Break />
         Leicester, MA 01524
       </ty.Text>
     </l.FlexColumn>
