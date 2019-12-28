@@ -10,9 +10,7 @@ import HoverAction from './HoverAction';
 import Nav from './Nav';
 
 const HeaderWrapper = styled(l.Space)({
-  backgroundImage: `radial-gradient(circle at 50% 0, ${th.colors.lightBlue}, ${
-    th.colors.blue
-  })`,
+  backgroundImage: `radial-gradient(circle at 50% 0, ${th.colors.lightBlue}, ${th.colors.blue})`,
   padding: `${th.spacing.l} ${th.spacing.xl} 0`,
   [th.breakpoints.tablet]: {
     padding: `${th.spacing.m} ${th.spacing.ml} 0`,
@@ -45,8 +43,8 @@ const Header = () => (
           wrapper: { p: th.spacing.sm },
         }}
         hoverColor={th.colors.green}
-        linkAction="tel:+15087571545"
-        text="(508)-757-1545"
+        linkAction="tel:+15084506264"
+        text="(508)-450-6264"
         Icon={PhoneImg}
       />
     </l.Flex>

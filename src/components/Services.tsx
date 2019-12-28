@@ -43,8 +43,8 @@ const Services = () => (
           text: { bold: 'true' },
         }}
         hoverColor={th.colors.green}
-        linkAction="tel:+15087571545"
-        text="(508) 757-1545"
+        linkAction="tel:+15084506264"
+        text="(508) 450-6264"
       />{' '}
       for a free estimate today.
     </ty.Text>
