@@ -37,8 +37,8 @@ const Footer = () => (
           text: { large: isSmall() ? '' : 'true' },
         }}
         hoverColor={th.colors.green}
-        linkAction="tel:+15087571545"
-        text="(508)-757-1545"
+        linkAction="tel:+15084506264"
+        text="(508)-450-6264"
         Icon={PhoneImg}
       />
       <l.Space height={th.spacing.sm} />
