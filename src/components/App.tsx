@@ -42,7 +42,8 @@ class App extends React.Component<{}, State> {
                       <l.Flex alignTop columnOnMobile>
                         <l.Space
                           mb={[th.spacing.l, 0, 0]}
-                          width={['100%', '65%', '75%']}>
+                          width={['100%', '65%', '75%']}
+                        >
                           <Services />
                           <Projects />
                           <Reviews />
