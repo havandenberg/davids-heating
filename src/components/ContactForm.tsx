@@ -98,7 +98,7 @@ class Step extends React.Component<FormComponentProps<ContactFields>> {
     if (process.env.REACT_APP_EMAILJS_KEY) {
       emailjs
         .send(
-          'davids_heat_and_ac',
+          'halsey_vandenberg',
           'davids_heat_estimate_request',
           {
             address,
@@ -167,7 +167,8 @@ const ContactFormComponent = () => (
     <l.Space
       id="estimate"
       mb={[th.spacing.l, 0, 0]}
-      ml={[0, th.spacing.l, th.spacing.l]}>
+      ml={[0, th.spacing.l, th.spacing.l]}
+    >
       <ty.H2 mb={th.spacing.l}>Free Estimate</ty.H2>
       <ContactForm
         errorMessage={
