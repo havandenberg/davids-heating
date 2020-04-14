@@ -5,6 +5,7 @@ import { brands, locations } from '../content';
 import l from '../styles/layout';
 import th, { spacing } from '../styles/theme';
 import ty from '../styles/typography';
+import { ASSETS_PATH } from '../utils/constants';
 import { isMobile, isMobileOnly } from '../utils/screensize';
 import { scrollToId } from '../utils/scroll';
 import { ButtonPrimary } from './Form/Button';
@@ -25,16 +26,31 @@ const Services = () => (
     <ty.H1 id="services" mb={spacing.l}>
       Services
     </ty.H1>
+    <l.Flex alignTop columnOnMobile spaceBetween>
+      <l.Img height={300} src={`${ASSETS_PATH}/group.jpg`} />
+      <l.Space height={th.spacing.ml} width={th.spacing.xl} />
+      <l.Space>
+        <ty.Text mb={th.spacing.ml}>
+          Owner David Berard has almost 30 years experience installing oil and
+          gas furnaces and specializes in Mitsubishi heat pump systems.
+        </ty.Text>
+        <ty.Text>Residential and commercial / licensed and insured.</ty.Text>
+        <l.Space height={th.spacing.ml} />
+        <l.FlexColumn>
+          <ty.Text bold>H.V.A.C.</ty.Text>
+          <ty.Text bold>CENTRAL AIR CONDITIONING</ty.Text>
+          <l.Space height={th.spacing.ml} />
+          <ty.Text>Installed:</ty.Text>                          
+          <ty.Text>* UNDER $10,000</ty.Text>
+          <ty.Text>* Rudd equipment</ty.Text>
+          <ty.Text>* 13 seer</ty.Text>
+          <ty.Text>* Up to 1,500 sq ft</ty.Text>
+          <ty.Text>* Electrical work extra</ty.Text>
+        </l.FlexColumn>
+      </l.Space>
+    </l.Flex>
+    <l.Space height={th.spacing.l} />
     <ty.Text>
-      Owner David Berard will be happy to take your phone call and answer any
-      questions. With over 25 years of experience in the h.v.a.c. trade, an
-      answer to your problem won’t take long. He has installed hundreds of
-      residential and commercial boilers and furnaces and has repaired all types
-      of heating and air conditioning equipment including heat pump systems.
-      David is on every job site to insure personalized customer service. He is
-      fully licensed and insured and can provide documentation and customer
-      references upon request.
-      <l.Space height={th.spacing.ml} />
       Fill out the form {isMobileOnly() ? 'below' : 'to the right'} or call{' '}
       <HoverAction
         actionType="anchor"
