@@ -55,4 +55,11 @@ export const projects = [
     thumbnailHeight: 225,
     thumbnailWidth: 169,
   },
+  {
+    caption: '',
+    src: `${ASSETS_PATH}/project-5.jpg`,
+    thumbnail: `${ASSETS_PATH}/project-5.jpg`,
+    thumbnailHeight: 225,
+    thumbnailWidth: 169,
+  },
 ];
