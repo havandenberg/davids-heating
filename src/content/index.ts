@@ -24,6 +24,8 @@ export const locations = [
   'Leicester',
   'Spencer',
   'Oxford',
+  'Grafton',
+  'Charlton',
 ];
 
 export const projects = [
