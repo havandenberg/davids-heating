@@ -61,8 +61,7 @@ const Reviews = () => {
             )}
           </l.Flex>
           <l.Space height={th.spacing.sm} />
-          <ty.Text bold>Project: {review.project}</ty.Text>
-          <l.Space height={th.spacing.sm} />
+          {review.project && <ty.Text bold mb={th.spacing.sm}>Project: {review.project}</ty.Text>}
           <ty.Text>"{review.description}"</ty.Text>
         </l.Space>
       ))}
