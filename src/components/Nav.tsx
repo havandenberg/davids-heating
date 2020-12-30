@@ -14,7 +14,6 @@ const navItems = [
   { name: 'Services', id: 'services' },
   { name: 'Projects', id: 'projects' },
   { name: 'Reviews', id: 'reviews' },
-  { name: 'Contact', id: 'contact' },
 ];
 
 const NavText = styled(t.H2)({
@@ -38,7 +37,8 @@ const Nav = () => (
         key={item.name}
         text={item.name}
         onClick={() => scrollToId(item.id)}
-        p={[spacing.s, spacing.l, spacing.l]}>
+        p={[spacing.s, spacing.l, spacing.l]}
+      >
         {item.name}
       </NavText>
     ))}

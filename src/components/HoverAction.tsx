@@ -19,6 +19,7 @@ interface Props {
   };
   hoverColor: string;
   Icon?: React.ComponentType<any>;
+  target?: string;
   text?: string;
 }
 
@@ -58,6 +59,7 @@ class HoverAction extends React.Component<Props, State> {
       hoverColor,
       Icon,
       text,
+      target,
     } = this.props;
     const { hover } = this.state;
     const activeColor = hover ? hoverColor : color;
@@ -72,7 +74,9 @@ class HoverAction extends React.Component<Props, State> {
         onMouseLeave={this.setHover(false)}
         to={to}
         onClick={clickAction}
-        {...styles.wrapper}>
+        target={target}
+        {...styles.wrapper}
+      >
         <l.Flex>
           {Icon && <Icon color={activeColor} {...styles.icon} />}
           {Icon && text && <l.Space width={spacing.m} />}

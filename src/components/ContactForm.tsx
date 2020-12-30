@@ -164,11 +164,7 @@ class ContactForm extends Form<ContactFields> {}
 
 const ContactFormComponent = () => (
   <Sticky bottomBoundary="#reviews-end" enabled={isTabletUp()} top={40}>
-    <l.Space
-      id="estimate"
-      mb={[th.spacing.l, 0, 0]}
-      ml={[0, th.spacing.l, th.spacing.l]}
-    >
+    <l.Space id="estimate" mb={[th.spacing.l, 0, 0]}>
       <ty.H2 mb={th.spacing.l}>Free Estimate</ty.H2>
       <ContactForm
         errorMessage={

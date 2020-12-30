@@ -109,6 +109,7 @@ class FormRow<FormFields> extends React.Component<FormRowProps<FormFields>> {
               onChange(item.valueName, e.currentTarget.value);
             }}
             placeholder={item.placeholder}
+            rows={5}
             customStyles={item.inputStyles}
             value={fields[item.valueName]}
             width="100%"
@@ -124,7 +125,8 @@ class FormRow<FormFields> extends React.Component<FormRowProps<FormFields>> {
             }}
             customStyles={item.inputStyles}
             value={fields[item.valueName]}
-            width="100%">
+            width="100%"
+          >
             {item.selectOptions.map((option: string, index: number) => (
               <option key={index} value={option}>
                 {option}
@@ -175,7 +177,8 @@ class FormRow<FormFields> extends React.Component<FormRowProps<FormFields>> {
         <l.Flex
           flex={1}
           maxWidth={customStyles.rowWidth}
-          width={customStyles.rowWidth}>
+          width={customStyles.rowWidth}
+        >
           {items.map(
             (
               item: FormItemProps<FormFields, keyof FormFields>,
@@ -206,7 +209,8 @@ class FormRow<FormFields> extends React.Component<FormRowProps<FormFields>> {
                           (helpTextItem: string, helpIndex: number) => (
                             <React.Fragment key={helpTextItem}>
                               <t.HelpText
-                                valid={this.validateHelpText(item, helpIndex)}>
+                                valid={this.validateHelpText(item, helpIndex)}
+                              >
                                 {helpTextItem}
                               </t.HelpText>
                               {item.helpText &&

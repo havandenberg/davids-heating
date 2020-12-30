@@ -75,7 +75,6 @@ export const TextArea = styled('textarea')(
   {
     ...inputStyles,
     ...scrollStyles,
-    height: 150,
     overflowX: 'visible',
     resize: 'none',
   },

@@ -39,10 +39,10 @@ class App extends React.Component<{}, State> {
                   <Header />
                   <l.Space background={th.colors.blue}>
                     <l.Page>
-                      <l.Flex alignTop columnOnMobile>
+                      <l.Flex alignTop columnOnMobile spaceBetween>
                         <l.Space
                           mb={[th.spacing.l, 0, 0]}
-                          width={['100%', '65%', '75%']}
+                          width={['100%', '60%', '70%']}
                         >
                           <Services />
                           <Projects />

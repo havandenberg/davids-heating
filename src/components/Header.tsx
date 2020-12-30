@@ -1,8 +1,8 @@
 import * as React from 'react';
 import styled from 'react-emotion';
 import { isMobileOnly, isTabletUp } from 'src/utils/screensize';
+import EmailImg from '../assets/images/email';
 import LogoImg from '../assets/images/logo.svg';
-import PhoneImg from '../assets/images/phone';
 import l from '../styles/layout';
 import th from '../styles/theme';
 import ty from '../styles/typography';
@@ -43,9 +43,9 @@ const Header = () => (
           wrapper: { p: th.spacing.sm },
         }}
         hoverColor={th.colors.green}
-        linkAction="tel:+15084506264"
-        text="(508)-450-6264"
-        Icon={PhoneImg}
+        linkAction="mailto:davidsheatandac@gmail.com"
+        text="Contact Now"
+        Icon={EmailImg}
       />
     </l.Flex>
     <l.Space height={[th.spacing.sm, 0, 0]} />

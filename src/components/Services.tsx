@@ -51,7 +51,7 @@ const Services = () => (
     </l.Flex>
     <l.Space height={th.spacing.l} />
     <ty.Text>
-      Fill out the form {isMobileOnly() ? 'below' : 'to the right'} or call{' '}
+      Fill out the form {isMobileOnly() ? 'below' : 'to the right'} or{' '}
       <HoverAction
         actionType="anchor"
         color={th.colors.blue}
@@ -59,10 +59,10 @@ const Services = () => (
           text: { bold: 'true' },
         }}
         hoverColor={th.colors.green}
-        linkAction="tel:+15084506264"
-        text="(508) 450-6264"
+        linkAction="mailto:davidsheatandac@gmail.com"
+        text="email us"
       />{' '}
-      for a free estimate today.
+      for a free estimate today. We will get back to you as soon as possible.
     </ty.Text>
     <l.Space height={th.spacing.l} />
     {isMobileOnly() && (

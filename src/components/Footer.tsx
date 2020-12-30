@@ -10,9 +10,7 @@ import { isMobileOnly, isSmall, isTabletUp } from '../utils/screensize';
 import HoverAction from './HoverAction';
 
 const FooterWrapper = styled(l.Flex)({
-  backgroundImage: `radial-gradient(circle at 50% 0, ${th.colors.lightBlue}, ${
-    th.colors.blue
-  })`,
+  backgroundImage: `radial-gradient(circle at 50% 0, ${th.colors.lightBlue}, ${th.colors.blue})`,
   padding: `${th.spacing.l} ${th.spacing.xl}`,
   [th.breakpoints.tablet]: {
     padding: `${th.spacing.m} ${th.spacing.ml}`,
@@ -29,18 +27,10 @@ const Footer = () => (
         Contact Us:
       </ty.H1>
       <l.Space height="100%" />
-      <HoverAction
-        actionType="anchor"
-        color={th.colors.white}
-        customStyles={{
-          icon: { height: th.spacing.ml },
-          text: { large: isSmall() ? '' : 'true' },
-        }}
-        hoverColor={th.colors.green}
-        linkAction="tel:+15084506264"
-        text="(508)-450-6264"
-        Icon={PhoneImg}
-      />
+      <ty.Text color={th.colors.white}>
+        * Email is the best way to contact us - we will reply as soon as
+        possible!
+      </ty.Text>
       <l.Space height={th.spacing.sm} />
       <HoverAction
         actionType="anchor"
@@ -55,6 +45,19 @@ const Footer = () => (
         Icon={EmailImg}
       />
       <l.Space height={th.spacing.sm} />
+      <HoverAction
+        actionType="anchor"
+        color={th.colors.white}
+        customStyles={{
+          icon: { height: th.spacing.ml },
+          text: { large: isSmall() ? '' : 'true' },
+        }}
+        hoverColor={th.colors.green}
+        linkAction="tel:+15084506264"
+        text="(508) 450-6264"
+        Icon={PhoneImg}
+      />
+      <l.Space height={th.spacing.sm} />
       <ty.Text color={th.colors.white} large={!isSmall()}>
         Leicester, MA 01524
       </ty.Text>
@@ -62,26 +65,30 @@ const Footer = () => (
     <l.FlexColumn alignBottom={isTabletUp()} mt={[th.spacing.ml, 0, 0]}>
       <l.FlexCentered
         alignBottom={isTabletUp()}
-        width={['100%', 'auto', 'auto']}>
+        width={['100%', 'auto', 'auto']}
+      >
         <ty.Title color={th.colors.white}>DAVID'S</ty.Title>
         <l.Space width={th.spacing.ml} />
         <l.Img height={th.spacing.xl} src={LogoImg} />
       </l.FlexCentered>
       <ty.Subtitle
         textAlign={isMobileOnly() ? 'center' : 'right'}
-        color={th.colors.green}>
+        color={th.colors.green}
+      >
         Heating & Air Conditioning
       </ty.Subtitle>
       <l.Space height={th.spacing.l} />
       <ty.Text
         color={th.colors.white}
-        textAlign={isMobileOnly() ? 'center' : 'right'}>
+        textAlign={isMobileOnly() ? 'center' : 'right'}
+      >
         Copyright © {new Date().getFullYear()} David’s Heat & AC
       </ty.Text>
       <l.Space height={th.spacing.sm} />
       <ty.Text
         color={th.colors.white}
-        textAlign={isMobileOnly() ? 'center' : 'right'}>
+        textAlign={isMobileOnly() ? 'center' : 'right'}
+      >
         Developed by Halsey Vandenberg
       </ty.Text>
     </l.FlexColumn>
