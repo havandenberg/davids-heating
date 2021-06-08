@@ -2,6 +2,15 @@ import { CustomerReview } from '../types';
 
 const reviews: CustomerReview[] = [
   {
+    date: '05-21-2021',
+    description:
+      'David did a wonderful job installing a Mitsubishi mini split system for me. He showed up exactly when he said he would and did everything he said he was going to do. I got the impression from my initial meeting with him that he was trustworthy and knowledgeable and he proved that to be an accurate description. I\'m very confident that if I were to run into any issues with my system David would stand behind his work so I really couldn\'t be happier with how this project has gone. I\'ve only used the unit a few times so far but I\'m pretty impressed with it. I\'m looking forward to NOT lugging window A/C units around every spring and fall!',
+    location: '',
+    name: 'Robert Berk',
+    project: '',
+    stars: 5,
+  },
+  {
     date: '09-02-2020',
     description:
       'Dave was wonderful to work with. He came highly recommended and was willing to work outside of his stated range and come to Marlboro to do an install to our house. He gave us great advice and worked with us to find a system that was perfect for our home. After the install, he came back to confirm everything was working. If we need more work done, we\'d hire him again in an instant.',
