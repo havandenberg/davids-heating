@@ -1,6 +1,17 @@
+// No format on save
+
 import { CustomerReview } from '../types';
 
 const reviews: CustomerReview[] = [
+  {
+    date: '09-22-2021',
+    description:
+      'David replaced an existing older Mini Split Air Conditioning unit with a Mitsubishi Mini Split Heat/ Air conditioner. A few weeks later, as scheduled, he installed an additional dual zone unit. Excellent work, Excellent products, on time, cleaned up work areas. Looking forward to the savings heating this winter. The units look great, are quiet and I\'d recommend him to anyone with HVAC needs.',
+    location: '',
+    name: 'Richard T Bennett',
+    project: '',
+    stars: 5,
+  },
   {
     date: '05-21-2021',
     description:
@@ -22,7 +33,7 @@ const reviews: CustomerReview[] = [
   {
     date: '11-10-2018',
     description:
-    'This is the best company! We hired David\'s to install central a/c based on not only the best price we got around  (we had 5 quotes) but also because David is the BEST contractor we have ever worked with. He\'s so nice and honest and he does a terrific job. We love our a/c system and are so glad we found David\'s- we would recommend him a million times over!',
+      'This is the best company! We hired David\'s to install central a/c based on not only the best price we got around  (we had 5 quotes) but also because David is the BEST contractor we have ever worked with. He\'s so nice and honest and he does a terrific job. We love our a/c system and are so glad we found David\'s- we would recommend him a million times over!',
     location: '',
     name: 'Sara',
     project: '',
@@ -31,7 +42,7 @@ const reviews: CustomerReview[] = [
   {
     date: '10-05-2018',
     description:
-      'David was a true pro and we were lucky to find him for our boiler replacement project. After receiving a very high quote for the project from our "trusted" oil company, my wife and I decided to get some other quotes for the job. David gave us a quote that worked with our budget and we just had a good rapport with him when he came to our home to look at our current heating system. David did a superior job communicating with us while setting up the timing of the project, letting us know the status during the project, and finally letting us know when the project was compete. We were very satisfied with the work he did, would recommend him highly, and would use him again.',
+      'David was a true pro and we were lucky to find him for our boiler replacement project. After receiving a very high quote for the project from our \"trusted\" oil company, my wife and I decided to get some other quotes for the job. David gave us a quote that worked with our budget and we just had a good rapport with him when he came to our home to look at our current heating system. David did a superior job communicating with us while setting up the timing of the project, letting us know the status during the project, and finally letting us know when the project was compete. We were very satisfied with the work he did, would recommend him highly, and would use him again.',
     location: 'Holden, MA',
     name: 'Andrew R',
     project: 'Install Oil Furnace / Forced Air Heating System',
