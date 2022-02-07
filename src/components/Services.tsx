@@ -40,12 +40,14 @@ const Services = () => (
           <ty.Text bold>H.V.A.C.</ty.Text>
           <ty.Text bold>CENTRAL AIR CONDITIONING</ty.Text>
           <l.Space height={th.spacing.ml} />
-          <ty.Text>Installed:</ty.Text>                          
+          <ty.Text>Installed:</ty.Text>
           <ty.Text>* UNDER $10,000</ty.Text>
           <ty.Text>* Rudd equipment</ty.Text>
           <ty.Text>* 13 seer</ty.Text>
           <ty.Text>* Up to 1,500 sq ft</ty.Text>
           <ty.Text>* Electrical work extra</ty.Text>
+          <ty.Text>* Repairs for existing customers only</ty.Text>
+          <ty.Text>* No cleanings or repairs available at this time</ty.Text>
         </l.FlexColumn>
       </l.Space>
     </l.Flex>
