@@ -35,37 +35,15 @@ const Services = () => (
           gas furnaces and specializes in Mitsubishi heat pump systems.
         </ty.Text>
         <ty.Text>Residential and commercial / licensed and insured.</ty.Text>
-        <l.Space height={th.spacing.ml} />
-        <l.FlexColumn>
+        <l.Space height={th.spacing.l} />
+        <l.FlexColumn mt={th.spacing.ml}>
           <ty.Text bold>H.V.A.C.</ty.Text>
           <ty.Text bold>CENTRAL AIR CONDITIONING</ty.Text>
           <l.Space height={th.spacing.ml} />
-          <ty.Text>Installed:</ty.Text>
-          <ty.Text>* UNDER $10,000</ty.Text>
-          <ty.Text>* Rudd equipment</ty.Text>
-          <ty.Text>* 13 seer</ty.Text>
-          <ty.Text>* Up to 1,500 sq ft</ty.Text>
-          <ty.Text>* Electrical work extra</ty.Text>
-          <ty.Text>* Repairs for existing customers only</ty.Text>
-          <ty.Text>* No cleanings or repairs available at this time</ty.Text>
+          <ty.Text bold>*INSTALLATIONS ONLY*</ty.Text>
         </l.FlexColumn>
       </l.Space>
     </l.Flex>
-    <l.Space height={th.spacing.l} />
-    <ty.Text>
-      Fill out the form {isMobileOnly() ? 'below' : 'to the right'} or{' '}
-      <HoverAction
-        actionType="anchor"
-        color={th.colors.blue}
-        customStyles={{
-          text: { bold: 'true' },
-        }}
-        hoverColor={th.colors.green}
-        linkAction="mailto:davidsheatandac@gmail.com"
-        text="email us"
-      />{' '}
-      for a free estimate today. We will get back to you as soon as possible.
-    </ty.Text>
     <l.Space height={th.spacing.l} />
     {isMobileOnly() && (
       <l.FlexCentered mb={th.spacing.l}>
@@ -82,6 +60,9 @@ const Services = () => (
       />
       <ty.Text large>Mass Save certified contractor</ty.Text>
     </l.Flex>
+    <ty.Text ml={[0, th.spacing.ml, th.spacing.xl]} mt={th.spacing.t}>
+      ($10,000 rebate when installing a whole-house Mitsubishi heat pump system)
+    </ty.Text>
     <l.Space height={th.spacing.ml} />
     <l.Flex ml={[0, th.spacing.ml, th.spacing.xl]}>
       <Bullet
@@ -100,6 +81,21 @@ const Services = () => (
       />
       <ty.Text large>New construction</ty.Text>
     </l.Flex>
+    <l.Space height={th.spacing.l} />
+    <ty.Text>
+      Fill out the form {isMobileOnly() ? 'below' : 'to the right'} or{' '}
+      <HoverAction
+        actionType="anchor"
+        color={th.colors.blue}
+        customStyles={{
+          text: { bold: 'true' },
+        }}
+        hoverColor={th.colors.green}
+        linkAction="mailto:davidsheatandac@gmail.com"
+        text="email us"
+      />{' '}
+      for a free estimate today. We will get back to you as soon as possible.
+    </ty.Text>
     <ty.H2 mb={spacing.l} mt={spacing.xl}>
       Serving the Greater Worcester Area
     </ty.H2>
