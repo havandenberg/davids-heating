@@ -36,11 +36,13 @@ const Services = () => (
         </ty.Text>
         <ty.Text>Residential and commercial / licensed and insured.</ty.Text>
         <l.Space height={th.spacing.l} />
-        <l.FlexColumn mt={th.spacing.ml}>
+        <l.FlexColumn>
           <ty.Text bold>H.V.A.C.</ty.Text>
           <ty.Text bold>CENTRAL AIR CONDITIONING</ty.Text>
           <l.Space height={th.spacing.ml} />
           <ty.Text bold>*INSTALLATIONS ONLY*</ty.Text>
+          <l.Space height={th.spacing.sm} />
+          <ty.Text>2 year warranty on all installations.</ty.Text>
         </l.FlexColumn>
       </l.Space>
     </l.Flex>
