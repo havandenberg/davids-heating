@@ -54,14 +54,6 @@ const Services = () => (
         </ButtonPrimary>
       </l.FlexCentered>
     )}
-    <l.Flex ml={[0, th.spacing.ml, th.spacing.xl]}>
-      <Bullet
-        minHeight={th.spacing.sm}
-        mr={th.spacing.m}
-        minWidth={th.spacing.sm}
-      />
-      <ty.Text large>Mass Save certified contractor</ty.Text>
-    </l.Flex>
     <ty.Text ml={[0, th.spacing.ml, th.spacing.xl]} mt={th.spacing.t}>
       ($10,000 rebate when installing a whole-house Mitsubishi heat pump system)
     </ty.Text>
