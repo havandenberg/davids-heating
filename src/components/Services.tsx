@@ -40,6 +40,8 @@ const Services = () => (
           <ty.Text bold>H.V.A.C.</ty.Text>
           <ty.Text bold>CENTRAL AIR CONDITIONING</ty.Text>
           <l.Space height={th.spacing.ml} />
+          <ty.Text bold>*No Service Calls*</ty.Text>
+          <l.Space height={th.spacing.ml} />
           <ty.Text bold>*INSTALLATIONS ONLY*</ty.Text>
           <l.Space height={th.spacing.sm} />
           <ty.Text>2 year warranty on all installations.</ty.Text>
