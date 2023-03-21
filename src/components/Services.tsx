@@ -66,15 +66,6 @@ const Services = () => (
         mr={th.spacing.m}
         minWidth={th.spacing.sm}
       />
-      <ty.Text large>Zero interest heat loans for seven years</ty.Text>
-    </l.Flex>
-    <l.Space height={th.spacing.ml} />
-    <l.Flex ml={[0, th.spacing.ml, th.spacing.xl]}>
-      <Bullet
-        minHeight={th.spacing.sm}
-        mr={th.spacing.m}
-        minWidth={th.spacing.sm}
-      />
       <ty.Text large>New construction</ty.Text>
     </l.Flex>
     <l.Space height={th.spacing.l} />
