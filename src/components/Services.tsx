@@ -40,6 +40,8 @@ const Services = () => (
           <ty.Text bold>H.V.A.C.</ty.Text>
           <ty.Text bold>CENTRAL AIR CONDITIONING</ty.Text>
           <l.Space height={th.spacing.ml} />
+          <ty.Text bold>BBB A+ rating</ty.Text>
+          <l.Space height={th.spacing.ml} />
           <ty.Text bold>*No Service Calls*</ty.Text>
           <l.Space height={th.spacing.ml} />
           <ty.Text bold>*INSTALLATIONS ONLY*</ty.Text>
@@ -56,9 +58,6 @@ const Services = () => (
         </ButtonPrimary>
       </l.FlexCentered>
     )}
-    <ty.Text ml={[0, th.spacing.ml, th.spacing.xl]} mt={th.spacing.t}>
-      ($10,000 rebate when installing a whole-house Mitsubishi heat pump system)
-    </ty.Text>
     <l.Space height={th.spacing.ml} />
     <l.Flex ml={[0, th.spacing.ml, th.spacing.xl]}>
       <Bullet

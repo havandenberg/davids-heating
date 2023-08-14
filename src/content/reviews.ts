@@ -4,6 +4,24 @@ import { CustomerReview } from '../types';
 
 const reviews: CustomerReview[] = [
   {
+    date: '08-08-2023',
+    description:
+      'Dave came to our house promptly when first contacted. He tested my old air conditioning system and found it to have zero charge. He tested it to see if it could hold a recharge. It could not. He gave us a quote for a new system that was competitive and reasonable. He replaced the whole system in one day. He was very thorough and professional. I would highly recommend his service to anyone.',
+    location: '',
+    name: 'William Zastrow',
+    project: '',
+    stars: 5,
+  },
+  {
+    date: '08-08-2023',
+    description:
+      'Dave did an excellent job installing two centrally-ducted Mitsubishi heat pump systems in a new-construction duplex I recently built. He met with me when I was just about to start construction and took the time to go through different product options and ductwork layouts to make sure the system would meet my needs. His price was very reasonable, and he responded promptly and worked quickly whenever I needed him to be there during construction (even on days when the temperatures were below freezing and the house wasn’t fully closed in yet). Both systems have been operational for about a month and have kept the inside comfortable despite the hot, humid summer. One of the air handlers shut down after a couple of weeks of use due to a faulty part, but Dave came out the next day to replace the part and get it back up and running. He is knowledgeable, professional, and fair, and I would not hesitate to hire him again for my next project.',
+    location: '',
+    name: 'Sean Griffin',
+    project: '',
+    stars: 5,
+  },
+  {
     date: '09-22-2021',
     description:
       'David replaced an existing older Mini Split Air Conditioning unit with a Mitsubishi Mini Split Heat/ Air conditioner. A few weeks later, as scheduled, he installed an additional dual zone unit. Excellent work, Excellent products, on time, cleaned up work areas. Looking forward to the savings heating this winter. The units look great, are quiet and I\'d recommend him to anyone with HVAC needs.',
