@@ -23,6 +23,14 @@ const FooterWrapper = styled(l.Flex)({
 const Footer = () => (
   <FooterWrapper columnOnMobile spaceBetween>
     <l.FlexColumn alignTop={isTabletUp()}>
+      <ty.Text color={th.colors.white}>Refrigeration tech license # RT-019197</ty.Text>
+      <l.Space height={th.spacing.s} />
+      <ty.Text color={th.colors.white}>Oil burner tech license # BU-113276</ty.Text>
+      <l.Space height={th.spacing.s} />
+      <ty.Text color={th.colors.white}>Sheet metal license # 3457</ty.Text>
+      <l.Space height={th.spacing.s} />
+      <ty.Text color={th.colors.white}>Master Electrician license # 22734A</ty.Text>
+      <l.Space height={th.spacing.l} />
       <ty.H1 bold color={th.colors.green} id="contact" mb={th.spacing.ml}>
         Contact Us:
       </ty.H1>
@@ -75,7 +83,7 @@ const Footer = () => (
         textAlign={isMobileOnly() ? 'center' : 'right'}
         color={th.colors.green}
       >
-        Heating & Air Conditioning
+        Heating & Air Conditioning & Electrical
       </ty.Subtitle>
       <l.Space height={th.spacing.l} />
       <ty.Text

@@ -30,7 +30,7 @@ const Header = () => (
           <l.Img height={th.spacing.xl} src={LogoImg} />
         </l.Flex>
         <ty.Subtitle center={isMobileOnly()} color={th.colors.green}>
-          Heating & Air Conditioning
+          Heating & Air Conditioning & Electrical
         </ty.Subtitle>
       </l.Space>
       <l.Space height={[th.spacing.sm, 0, 0]} />

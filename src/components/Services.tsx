@@ -27,14 +27,14 @@ const Services = () => (
       Services
     </ty.H1>
     <l.Flex alignTop columnOnMobile spaceBetween>
-      <l.Img height={300} src={`${ASSETS_PATH}/group.jpg`} />
+      <l.Img height={400} src={`${ASSETS_PATH}/group.jpg`} />
       <l.Space height={th.spacing.ml} width={th.spacing.xl} />
       <l.Space>
         <ty.Text mb={th.spacing.ml}>
           Owner David Berard has almost 30 years experience installing oil and
           gas furnaces and specializes in Mitsubishi heat pump systems.
         </ty.Text>
-        <ty.Text>Residential and commercial / licensed and insured.</ty.Text>
+        <ty.Text>Residential and commercial / licensed and insured. Est. 2001.</ty.Text>
         <l.Space height={th.spacing.l} />
         <l.FlexColumn>
           <ty.Text bold>H.V.A.C.</ty.Text>
@@ -47,10 +47,12 @@ const Services = () => (
           <ty.Text bold>*INSTALLATIONS ONLY*</ty.Text>
           <l.Space height={th.spacing.sm} />
           <ty.Text>2 year warranty on all installations.</ty.Text>
+          <l.Space height={th.spacing.ml} />
+          <ty.Text bold>New construction</ty.Text>
         </l.FlexColumn>
       </l.Space>
     </l.Flex>
-    <l.Space height={th.spacing.l} />
+    <l.Space height={th.spacing.xl} />
     {isMobileOnly() && (
       <l.FlexCentered mb={th.spacing.l}>
         <ButtonPrimary onClick={() => scrollToId('estimate')}>
@@ -58,17 +60,17 @@ const Services = () => (
         </ButtonPrimary>
       </l.FlexCentered>
     )}
-    <l.Space height={th.spacing.ml} />
-    <l.Flex ml={[0, th.spacing.ml, th.spacing.xl]}>
-      <Bullet
-        minHeight={th.spacing.sm}
-        mr={th.spacing.m}
-        minWidth={th.spacing.sm}
-      />
-      <ty.Text large>New construction</ty.Text>
-    </l.Flex>
-    <l.Space height={th.spacing.l} />
-    <ty.Text>
+    <l.FlexColumn>
+      <ty.Text bold large mb={th.spacing.ml}>
+        WHY US?
+      </ty.Text>
+      <ty.Text>
+        We're a small company with a low overhead. We offer a competitive price and personalized service from start to
+        finish on every job.
+      </ty.Text>
+    </l.FlexColumn>
+    <l.Space height={th.spacing.xl} />
+    <ty.Text mb={th.spacing.l}>
       Fill out the form {isMobileOnly() ? 'below' : 'to the right'} or{' '}
       <HoverAction
         actionType="anchor"
@@ -80,7 +82,14 @@ const Services = () => (
         linkAction="mailto:davidsheatandac@gmail.com"
         text="email us"
       />{' '}
-      for a free estimate today. We will get back to you as soon as possible.
+      for a free estimate today. 
+    </ty.Text>
+    <ty.Text mb={th.spacing.l}>
+      All estimates done on Saturdays 8:00am - 12:00pm.
+      Please request a time in the description.
+    </ty.Text>
+    <ty.Text>
+      We will get back to you as soon as possible.
     </ty.Text>
     <ty.H2 mb={spacing.l} mt={spacing.xl}>
       Serving the Greater Worcester Area
