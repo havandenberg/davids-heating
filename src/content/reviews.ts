@@ -4,6 +4,33 @@ import { CustomerReview } from '../types';
 
 const reviews: CustomerReview[] = [
   {
+    date: '01-17-2024',
+    description:
+      'Dave was recommended to me by a coworker and he didn\'t disappoint. Dave was great to talk to and very professional when he came to replace our oil burner. He went above and beyond and was a pleasure to deal with. I would highly recommend Dave for all your heating and air conditioning needs!!!   Thanks Dave!!',
+    location: '',
+    name: 'Todd Gingras',
+    project: '',
+    stars: 5,
+  },
+  {
+    date: '01-05-2024',
+    description:
+      'Dave installed central AC in our home. We needed two separate units and he ensured all areas of our home were covered despite a very small attic crawl space because we have cathedral ceiling! They have worked flawlessly for over 7 years. We recently had Dave back to hide the outdoor pipes under our house siding because we were residing our house. He redid the work so we now have the pipes under our walls/siding. He had to come back multiple times based on our siding companies progress. When we called, he was prompt in scheduling and communicative. The work done the second time around ended up taking much longer than anticipated, he stuck to his original price for the job. There were no surprises. I highly recommend Dave for your central AC needs!',
+    location: '',
+    name: 'Liz Gray',
+    project: '',
+    stars: 5,
+  },
+  {
+    date: '12-18-2023',
+    description:
+      'David got my boiler running, then ordered and installed parts to keep it running. Friendly, timely and professional service. Highly recommend.',
+    location: '',
+    name: 'Michele Fulk',
+    project: '',
+    stars: 5,
+  },
+  {
     date: '08-08-2023',
     description:
       'Dave came to our house promptly when first contacted. He tested my old air conditioning system and found it to have zero charge. He tested it to see if it could hold a recharge. It could not. He gave us a quote for a new system that was competitive and reasonable. He replaced the whole system in one day. He was very thorough and professional. I would highly recommend his service to anyone.',
