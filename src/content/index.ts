@@ -16,18 +16,20 @@ export const brands = [
 ];
 
 export const locations = [
-  'Worcester',
   'Auburn',
   'Boylston',
-  'Holden',
-  'Shrewsbury',
-  'Leicester',
-  'Spencer',
-  'Oxford',
-  'Grafton',
   'Charlton',
-  'Rutland',
+  'Grafton',
+  'Holden',
+  'Leicester',
+  'Northbridge',
+  'Northbrough',
+  'Oxford',
   'Paxton',
+  'Rutland',
+  'Shrewsbury',
+  'Spencer',
+  'Worcester',
 ];
 
 export const projects = [

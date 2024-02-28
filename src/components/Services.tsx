@@ -45,8 +45,9 @@ const Services = () => (
           <ty.Text bold>*No Service Calls*</ty.Text>
           <l.Space height={th.spacing.ml} />
           <ty.Text bold>*INSTALLATIONS ONLY*</ty.Text>
-          <l.Space height={th.spacing.sm} />
-          <ty.Text>2 year warranty on all installations.</ty.Text>
+          <l.Space height={th.spacing.ml} />
+          <ty.Text bold>Mass Save rebates available</ty.Text>
+          <ty.Text bold>Up to $10,000</ty.Text>
           <l.Space height={th.spacing.ml} />
           <ty.Text bold>New construction</ty.Text>
         </l.FlexColumn>
