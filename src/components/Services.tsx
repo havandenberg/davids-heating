@@ -34,7 +34,9 @@ const Services = () => (
           Owner David Berard has almost 30 years experience installing oil and
           gas furnaces and specializes in Mitsubishi heat pump systems.
         </ty.Text>
-        <ty.Text>Residential and commercial / licensed and insured. Est. 2001.</ty.Text>
+        <ty.Text>
+          Residential and commercial / licensed and insured. Est. 2001.
+        </ty.Text>
         <l.Space height={th.spacing.l} />
         <l.FlexColumn>
           <ty.Text bold>H.V.A.C.</ty.Text>
@@ -42,9 +44,7 @@ const Services = () => (
           <l.Space height={th.spacing.ml} />
           <ty.Text bold>BBB A+ rating</ty.Text>
           <l.Space height={th.spacing.ml} />
-          <ty.Text bold>*No Service Calls*</ty.Text>
-          <l.Space height={th.spacing.ml} />
-          <ty.Text bold>*INSTALLATIONS ONLY*</ty.Text>
+          <ty.Text bold>*Service calls returned within 24 hours*</ty.Text>
           <l.Space height={th.spacing.ml} />
           <ty.Text bold>Mass Save rebates available</ty.Text>
           <ty.Text bold>Up to $10,000</ty.Text>
@@ -66,8 +66,8 @@ const Services = () => (
         WHY US?
       </ty.Text>
       <ty.Text>
-        We're a small company with a low overhead. We offer a competitive price and personalized service from start to
-        finish on every job.
+        We're a small company with a low overhead. We offer a competitive price
+        and personalized service from start to finish on every job.
       </ty.Text>
     </l.FlexColumn>
     <l.Space height={th.spacing.xl} />
@@ -83,15 +83,13 @@ const Services = () => (
         linkAction="mailto:davidsheatandac@gmail.com"
         text="email us"
       />{' '}
-      for a free estimate today. 
+      for a free estimate today.
     </ty.Text>
     <ty.Text mb={th.spacing.l}>
-      All estimates done on Saturdays 8:00am - 12:00pm.
-      Please request a time in the description.
+      All estimates done on Saturdays 8:00am - 12:00pm. Please request a time in
+      the description.
     </ty.Text>
-    <ty.Text>
-      We will get back to you as soon as possible.
-    </ty.Text>
+    <ty.Text>We will get back to you as soon as possible.</ty.Text>
     <ty.H2 mb={spacing.l} mt={spacing.xl}>
       Serving the Greater Worcester Area
     </ty.H2>
