@@ -50,6 +50,8 @@ const Services = () => (
           <ty.Text bold>Up to $10,000</ty.Text>
           <l.Space height={th.spacing.ml} />
           <ty.Text bold>New construction</ty.Text>
+          <l.Space height={th.spacing.ml} />
+          <ty.Text>*Not accepting credit cards*</ty.Text>
         </l.FlexColumn>
       </l.Space>
     </l.Flex>
