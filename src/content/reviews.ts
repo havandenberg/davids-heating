@@ -4,6 +4,15 @@ import { CustomerReview } from '../types';
 
 const reviews: CustomerReview[] = [
   {
+    date: '05-13-2024',
+    description:
+      'Our friends had Dave install a new AC system and recommended him to us.\nHe was fantastic! He always showed up on time, was efficient, neat and respectful of the interior of our home and very reasonably priced. We would highly recommend him for any work that you might need done.\n\nThe Germond Family\n\nHolden, MA',
+    location: '',
+    name: 'Michael Germond',
+    project: '',
+    stars: 5,
+  },
+  {
     date: '01-17-2024',
     description:
       'Dave was recommended to me by a coworker and he didn\'t disappoint. Dave was great to talk to and very professional when he came to replace our oil burner. He went above and beyond and was a pleasure to deal with. I would highly recommend Dave for all your heating and air conditioning needs!!!   Thanks Dave!!',
