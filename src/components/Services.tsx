@@ -44,7 +44,7 @@ const Services = () => (
           <l.Space height={th.spacing.ml} />
           <ty.Text bold>BBB A+ rating</ty.Text>
           <l.Space height={th.spacing.ml} />
-          <ty.Text bold>*Service calls returned within 24 hours*</ty.Text>
+          <ty.Text bold>*No service calls*</ty.Text>
           <l.Space height={th.spacing.ml} />
           <ty.Text bold>Mass Save rebates available</ty.Text>
           <ty.Text bold>Up to $10,000</ty.Text>
