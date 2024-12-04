@@ -18,7 +18,7 @@
     "emoji-strip": "^1.0.1",
     "emotion": "^9.2.12",
     "firebase": "^5.8.6",
-    "moment": "^2.22.2",
+    "moment": "^2.29.4",
     "query-string": "^6.2.0",
     "ramda": "^0.25.0",
     "react": "^16.6.0",
